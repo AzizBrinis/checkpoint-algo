@@ -1,0 +1,24 @@
+ALGORITHM checkpoint
+VAR
+    a,b,c,i : INTEGER
+    ch : STRING
+BEGIN
+    read(ch)
+    a:=1
+    b:=0
+    c := ch.length
+    
+    
+    FOR i FROM 1 TO c STEP 1  DO
+        IF (ch[i]=" ") THEN
+            a:=a+1
+        END_IF
+        IF (upcase(ch[i]) in ["A","E","I","O","U","Y"]) THEN
+            b:= b+1
+        END_IF
+    END_FOR
+    write(c)
+    write(a)
+    write(b)
+
+END
